@@ -19,7 +19,7 @@ O Response Body será uma lista de string com as senhas fortes </br>
 
 ### O Teste
 Estão em fase de implementação os testes unitários utilizando o tipo de projeto xUnit, abrangendo o maior número de cenários possíveis.
-![image](https://github.com/user-attachments/assets/de665555-b818-4e9c-953a-b53d07c62b55)
+![image](https://github.com/user-attachments/assets/59410bd0-955e-4679-91cc-87d7da8d290c)
 
 
 ## TECNOLOGIAS ENVOLVIDAS
