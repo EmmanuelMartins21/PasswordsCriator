@@ -1,6 +1,5 @@
 ﻿using Microsoft.AspNetCore.Mvc;
 using PassWordsCriator.API.Services;
-using System.ComponentModel.DataAnnotations;
 
 namespace PassWords.Controllers;
 
@@ -8,36 +7,36 @@ namespace PassWords.Controllers;
 [Route("passwords")]
 public class PasswordsController : Controller
 {
-    private readonly IPasswordService _passwordService;
+    private readonly IPasswordService _service;
 
     public PasswordsController(IPasswordService passwordService)
     {
-        _passwordService = passwordService;
+        _service = passwordService;
     }
 
     [HttpGet("medium")]
     public string GetMediumPassword()
     {
-        return _passwordService.GetMediumPassword();
+        return _service.GetMediumPassword();
     }
 
     [HttpGet("hard")]
     public string GetHardPassword()
     {
-        return _passwordService.GetHardPassword();
+        return _service.GetHardPassword();
     }
 
     [HttpGet("hard/list")]
     public ActionResult<IEnumerable<string>> GetHardList()
     {
-        var result = _passwordService.GetHardList() != null ? _passwordService.GetHardList().ToList() : new();
+        var result = _service.GetHardList() != null ? _service.GetHardList().ToList() : new();
         return Ok(result);
     }
 
     [HttpGet("medium/list")]
     public ActionResult<IEnumerable<string>> GetMediumList()
     {
-        var result = _passwordService.GetMediumList() != null ? _passwordService.GetMediumList().ToList() : new();
+        var result = _service.GetMediumList() != null ? _service.GetMediumList().ToList() : new();
         return Ok(result);
     }
 }

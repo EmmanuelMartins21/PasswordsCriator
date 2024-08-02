@@ -27,7 +27,7 @@ public class PasswordService : IPasswordService
             passWords.Add(passwordAux);
             contador++;
             passwordAux = string.Empty;
-        } while (contador < 20);
+        } while (contador < 14);
 
         return passWords;
     }

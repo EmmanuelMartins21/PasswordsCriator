@@ -1,6 +1,4 @@
-﻿using Microsoft.AspNetCore.Mvc;
-
-namespace PassWordsCriator.API.Services;
+﻿namespace PassWordsCriator.API.Services;
 
 public interface IPasswordService
 {
